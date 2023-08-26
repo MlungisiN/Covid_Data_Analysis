@@ -5,7 +5,7 @@ FROM PortfolioProject.dbo.CovidDeaths
 ORDER BY 1, 2
 
 -- Total Cases vs Total Deaths
--- Displays the likelihood of dying if you contract Cocid in South Africa
+-- Displays the likelihood of dying if you contract Covid in South Africa
 
 SELECT location, date, total_cases, total_deaths, (convert( float, total_deaths)/NULLIF(convert(float, total_cases),0))*100 AS DeathPercentage
 FROM PortfolioProject.dbo.CovidDeaths
